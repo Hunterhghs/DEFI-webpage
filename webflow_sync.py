@@ -286,7 +286,6 @@ def push(client: WebflowClient) -> None:
     if not CONTENT_DEF.exists():
         print(f"\n  ✗ Content definition not found: {CONTENT_DEF}")
         print(f"  → Create {CONTENT_DEF} with your content to push.")
-        print(f"  → See example structure below.")
         _print_example_definition()
         sys.exit(1)
 
@@ -297,16 +296,34 @@ def push(client: WebflowClient) -> None:
         print("  → Run --discover to find your site ID.")
         sys.exit(1)
 
-    print("\n═══ Pushing to Webflow CMS ═══\n")
-    print(f"  Target site: {target_site_id}")
-
-    # Get existing collections
-    existing_cols = client.list_collections(target_site_id)
-    existing_by_slug = {c["slug"]: c for c in existing_cols}
+    is_dry = client.dry_run
+    label = "[DRY RUN] " if is_dry else ""
+    print(f"\n═══ {label}Pushing to Webflow CMS ═══\n")
+    print(f"  {label}Target site: {target_site_id}")
 
     collections_def = definition.get("collections", [])
     total_created = 0
     total_updated = 0
+
+    if is_dry:
+        # In dry-run mode, simulate without any API calls
+        for col_def in collections_def:
+            display_name = col_def["displayName"]
+            slug = col_def["slug"]
+            items_def = col_def.get("items", [])
+            print(f"\n  [{label}Collection: {display_name} ({slug})]")
+            print(f"  {label}  Would create collection if it doesn't exist")
+            for item_def in items_def:
+                name = item_def.get("name") or item_def.get("title", "")
+                print(f"  {label}  + Would create/update item: \"{name}\"")
+                total_created += 1
+        print(f"\n  {label}✓ Would create/update {total_created} items across {len(collections_def)} collections")
+        print(f"  {label}→ Run without --dry-run to execute. Token needs scopes: sites:read, cms:read, cms:write")
+        return
+
+    # Get existing collections
+    existing_cols = client.list_collections(target_site_id)
+    existing_by_slug = {c["slug"]: c for c in existing_cols}
 
     for col_def in collections_def:
         slug = col_def["slug"]
@@ -314,7 +331,6 @@ def push(client: WebflowClient) -> None:
         singular = col_def.get("singularName", display_name.rstrip("s"))
         items_def = col_def.get("items", [])
 
-        # Create or find collection
         if slug in existing_by_slug:
             collection_id = existing_by_slug[slug]["id"]
             print(f"\n  Using existing collection: {display_name} ({collection_id})")
@@ -324,7 +340,6 @@ def push(client: WebflowClient) -> None:
             collection_id = result.get("id")
             print(f"    ✓ Created: {collection_id}")
 
-        # Get existing items for matching
         existing_items = client.list_items(collection_id)
         existing_by_name = {}
         for item in existing_items:
@@ -333,7 +348,6 @@ def push(client: WebflowClient) -> None:
             if name:
                 existing_by_name[name] = item
 
-        # Push items
         for item_def in items_def:
             name = item_def.get("name") or item_def.get("title", "")
             field_data = {
