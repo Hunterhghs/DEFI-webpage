@@ -1,482 +1,383 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeFi — The Decentralized Financial Revolution</title>
-  <meta name="description" content="Discover how Decentralized Finance (DeFi) is reshaping the global financial system. Explore protocols, benefits, risks, and how to get started in the permissionless economy.">
-  <meta name="keywords" content="DeFi, Decentralized Finance, blockchain, Ethereum, DEX, lending, stablecoins, yield farming, crypto, Web3">
-  <meta name="author" content="H Heuristics">
-  <meta property="og:title" content="DeFi — The Decentralized Financial Revolution">
-  <meta property="og:description" content="Discover how Decentralized Finance is reshaping the global financial system.">
-  <meta property="og:type" content="website">
+  <title>Decentralized Finance — An Analytical Overview | H&nbsp;Heuristics</title>
+  <meta name="description" content="A rigorous examination of Decentralized Finance: its architecture, ecosystem components, benefits, risks, and implications for global financial infrastructure.">
+  <meta property="og:title" content="Decentralized Finance — An Analytical Overview">
+  <meta property="og:description" content="A rigorous examination of DeFi architecture, ecosystem, and implications.">
+  <meta property="og:type" content="article">
   <meta property="og:url" content="https://hunterhghs.github.io/DEFI-webpage/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://hunterhghs.github.io/DEFI-webpage/">
 
-  <!-- Fonts -->
+  <!-- Fonts: Serif headings (authority) + Sans body (clarity) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "DeFi — The Decentralized Financial Revolution",
-    "url": "https://hunterhghs.github.io/DEFI-webpage/",
-    "description": "An informative resource on Decentralized Finance (DeFi).",
-    "publisher": {
-      "@type": "Organization",
-      "name": "H Heuristics"
-    }
+    "@type": "Article",
+    "headline": "Decentralized Finance — An Analytical Overview",
+    "author": { "@type": "Organization", "name": "H Heuristics" },
+    "publisher": { "@type": "Organization", "name": "H Heuristics", "url": "https://www.hheuristics.com" }
   }
   </script>
 </head>
 <body>
-  <!-- Skip Link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <!-- Navigation -->
-  <header class="nav" role="banner">
-    <div class="nav__inner">
-      <a href="#" class="nav__logo" aria-label="DeFi Home">
-        <svg class="nav__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="currentColor" fill-opacity="0.12"/>
-          <path d="M10 16L14 20L22 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="nav__logo-text">DeFi <span class="nav__logo-subtle">Explorer</span></span>
-      </a>
-      <nav class="nav__links" aria-label="Main navigation">
-        <a href="#what-is-defi" class="nav__link">What Is DeFi</a>
-        <a href="#ecosystem" class="nav__link">Ecosystem</a>
-        <a href="#benefits-risks" class="nav__link">Benefits &amp; Risks</a>
-        <a href="#get-started" class="nav__link">Get Started</a>
+  <!-- Masthead -->
+  <header class="masthead" role="banner">
+    <div class="masthead__inner">
+      <div class="masthead__brand">
+        <a href="#" class="masthead__name" aria-label="DeFi Analysis Home">H<span class="masthead__name-accent">&nbsp;Heuristics</span></a>
+        <span class="masthead__section">/ DeFi Analysis</span>
+      </div>
+      <nav class="masthead__nav" aria-label="Section navigation">
+        <a href="#architecture" class="masthead__link">Architecture</a>
+        <a href="#ecosystem" class="masthead__link">Ecosystem</a>
+        <a href="#assessment" class="masthead__link">Assessment</a>
+        <a href="#engagement" class="masthead__link">Engagement</a>
       </nav>
-      <button class="nav__mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="nav__hamburger"></span>
+      <button class="masthead__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="masthead__toggle-bar"></span>
       </button>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
-      <div class="hero__content">
-        <div class="hero__badge">
-          <span class="hero__badge-dot"></span>
-          The New Frontier of Finance
-        </div>
-        <h1 class="hero__title">
-          <span class="hero__title-line">Decentralized</span>
-          <span class="hero__title-line hero__title-line--accent">Finance</span>
-        </h1>
-        <p class="hero__subtitle">
-          An open, permissionless, and transparent financial system — built on
-          blockchain technology, accessible to anyone with an internet connection.
-        </p>
-        <div class="hero__actions">
-          <a href="#what-is-defi" class="btn btn--primary">
-            Explore DeFi
-            <svg class="btn__arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
-            </svg>
-          </a>
-          <a href="#get-started" class="btn btn--outline">Get Started</a>
-        </div>
-      </div>
-      <div class="hero__stats" aria-label="DeFi market statistics">
-        <div class="hero__stat">
-          <span class="hero__stat-value" data-count="75">$0</span>
-          <span class="hero__stat-label">Billion TVL</span>
-        </div>
-        <div class="hero__stat">
-          <span class="hero__stat-value" data-count="5.2">0</span>
-          <span class="hero__stat-label">Million Users</span>
-        </div>
-        <div class="hero__stat">
-          <span class="hero__stat-value" data-count="300">0</span>
-          <span class="hero__stat-label">+ Protocols</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- What Is DeFi -->
-    <section class="section" id="what-is-defi">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__kicker">Understanding the Basics</span>
-          <h2 class="section__title">What Is <span class="text-accent">DeFi</span>?</h2>
-          <p class="section__desc">
-            Decentralized Finance — or DeFi — is a collective term for financial
-            applications and services built on public blockchain networks. It
-            represents a paradigm shift away from centralized intermediaries
-            toward peer-to-peer, code-governed financial infrastructure.
+    <!-- Article Header -->
+    <article class="article">
+      <header class="article__header">
+        <div class="container container--narrow">
+          <p class="article__kicker">Analytical Briefing&ensp;·&ensp;July 2026</p>
+          <h1 class="article__title">Decentralized Finance:<br>A Structural Assessment</h1>
+          <p class="article__dek">
+            An examination of DeFi's architectural foundations, ecosystem composition,
+            and implications for the trajectory of global financial infrastructure.
           </p>
+          <div class="article__meta">
+            <span>H Heuristics</span>
+            <span class="article__meta-sep">|</span>
+            <span>12 min read</span>
+            <span class="article__meta-sep">|</span>
+            <span>Research Briefing</span>
+          </div>
         </div>
-        <div class="grid grid--2col">
-          <div class="card card--bordered">
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5"/>
-                <path d="M2 12l10 5 10-5"/>
-              </svg>
+      </header>
+
+      <!-- Key Figures -->
+      <section class="figures" aria-label="Key market figures">
+        <div class="container">
+          <div class="figures__grid" id="figures-grid">
+            <div class="figure">
+              <span class="figure__value" data-target="75" data-prefix="$" data-suffix="B">—</span>
+              <span class="figure__label">Total Value Locked</span>
+              <span class="figure__note">Across all chains, Q2 2026</span>
             </div>
-            <h3 class="card__title">Traditional Finance vs. DeFi</h3>
-            <table class="compare-table" aria-label="Comparison of traditional finance and DeFi">
+            <div class="figure">
+              <span class="figure__value" data-target="5.2" data-suffix="M">—</span>
+              <span class="figure__label">Unique Addresses</span>
+              <span class="figure__note">Cumulative, all protocols</span>
+            </div>
+            <div class="figure">
+              <span class="figure__value" data-target="300" data-suffix="+">—</span>
+              <span class="figure__label">Active Protocols</span>
+              <span class="figure__note">Across major L1s and L2s</span>
+            </div>
+            <div class="figure">
+              <span class="figure__value" data-target="24.3" data-suffix="%">—</span>
+              <span class="figure__label">YoY TVL Growth</span>
+              <span class="figure__note">Trailing twelve months</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section I: Architecture -->
+      <section class="section" id="architecture" data-cms-section="architecture">
+        <div class="container container--narrow">
+          <span class="section__num">I</span>
+          <h2 class="section__title">Defining the Architecture</h2>
+
+          <p class="section__body">
+            Decentralized Finance refers to a set of financial services and products
+            deployed on public blockchain networks — primarily Ethereum and its
+            layer-2 scaling solutions. Unlike conventional finance, which operates
+            through centralized intermediaries (banks, clearinghouses, exchanges),
+            DeFi executes financial logic through immutable smart contracts:
+            self-executing code that settles transactions autonomously on-chain.
+          </p>
+
+          <p class="section__body">
+            The architectural distinction is not incremental but categorical.
+            In traditional finance, trust is institutional: a bank holds your
+            deposits, a broker executes your trades, a clearinghouse guarantees
+            settlement. In DeFi, trust is cryptographic: the protocol's code is
+            open-source and auditable; custody rests with the user's private keys;
+            settlement is deterministic.
+          </p>
+
+          <figure class="comparison">
+            <figcaption class="comparison__caption">Table 1 — Structural Comparison: Traditional Finance vs. Decentralized Finance</figcaption>
+            <table class="comparison__table" aria-label="Comparison of traditional and decentralized finance">
               <thead>
                 <tr>
-                  <th scope="col">Feature</th>
+                  <th scope="col">Dimension</th>
                   <th scope="col">Traditional Finance</th>
-                  <th scope="col" class="text-accent">DeFi</th>
+                  <th scope="col">Decentralized Finance</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Custody</td><td>Bank-held</td><td class="text-accent">Self-custody</td></tr>
-                <tr><td>Hours</td><td>9&ndash;5, weekdays</td><td class="text-accent">24/7/365</td></tr>
-                <tr><td>Settlement</td><td>2&ndash;3 days</td><td class="text-accent">Seconds</td></tr>
-                <tr><td>Access</td><td>Bank account required</td><td class="text-accent">Internet only</td></tr>
-                <tr><td>Governance</td><td>Centralized board</td><td class="text-accent">Community DAOs</td></tr>
-                <tr><td>Transparency</td><td>Opaque</td><td class="text-accent">Fully auditable</td></tr>
+                <tr><td>Custody Model</td><td>Institutional (bank / broker)</td><td>Self-custody (private key)</td></tr>
+                <tr><td>Operating Hours</td><td>Business hours, weekdays</td><td>Continuous (24/7/365)</td></tr>
+                <tr><td>Settlement Time</td><td>T+2 or longer</td><td>Seconds to minutes</td></tr>
+                <tr><td>Access Requirement</td><td>Bank account, identity verification</td><td>Internet connection, wallet</td></tr>
+                <tr><td>Governance</td><td>Centralized (board / management)</td><td>Distributed (token-holder DAOs)</td></tr>
+                <tr><td>Auditability</td><td>Opaque (proprietary ledgers)</td><td>Transparent (public blockchain)</td></tr>
+                <tr><td>Composability</td><td>Limited (bilateral agreements)</td><td>Native (protocol-level interoperability)</td></tr>
+                <tr><td>Reversibility</td><td>Possible (chargebacks, corrections)</td><td>Immutable (final settlement)</td></tr>
               </tbody>
             </table>
-          </div>
-          <div class="card card--bordered">
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
-            </div>
-            <h3 class="card__title">The Core Principles</h3>
-            <ul class="principle-list">
-              <li class="principle-list__item">
-                <strong>Permissionless</strong>
-                <span>Anyone can participate — no gatekeepers, no application forms, no minimum balance requirements.</span>
-              </li>
-              <li class="principle-list__item">
-                <strong>Transparent</strong>
-                <span>All transactions are recorded on public ledgers. Smart contract code is open-source and auditable.</span>
-              </li>
-              <li class="principle-list__item">
-                <strong>Immutable</strong>
-                <span>Once confirmed, transactions cannot be reversed or tampered with by any single party.</span>
-              </li>
-              <li class="principle-list__item">
-                <strong>Composable</strong>
-                <span>Protocols can interact like &ldquo;money Legos&rdquo; — stacking together to create novel financial products.</span>
-              </li>
-              <li class="principle-list__item">
-                <strong>Non-custodial</strong>
-                <span>You retain full control of your assets through private keys — not your keys, not your coins.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+          </figure>
 
-    <!-- DeFi Ecosystem -->
-    <section class="section section--alt" id="ecosystem">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__kicker">The Landscape</span>
-          <h2 class="section__title">The DeFi <span class="text-accent">Ecosystem</span></h2>
-          <p class="section__desc">
-            DeFi is not a single product — it is a rich, interconnected ecosystem
-            of protocols and services. Each category serves a distinct role in the
-            emerging decentralized financial stack.
+          <p class="section__body">
+            The implications extend well beyond marginal efficiency gains.
+            Composability — the capacity for protocols to interoperate without
+            permission — creates an environment where financial products can be
+            assembled from modular components, much as open-source software is
+            composed from libraries. This property has no analogue in traditional
+            finance, where integration requires bilateral legal agreements and
+            costly middleware.
           </p>
         </div>
-        <div class="grid grid--3col ecosystem-grid">
-          <article class="eco-card" tabindex="0">
-            <div class="eco-card__icon eco-card__icon--dex">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M7 16l-4-4 4-4"/>
-                <path d="M17 8l4 4-4 4"/>
-                <path d="M3 12h18"/>
-              </svg>
-            </div>
-            <h3 class="eco-card__title">Decentralized Exchanges</h3>
-            <span class="eco-card__tag">DEXs</span>
-            <p class="eco-card__desc">
-              Peer-to-peer marketplaces where users trade tokens directly from
-              their wallets. Automated Market Makers (AMMs) like Uniswap use
-              liquidity pools instead of order books.
-            </p>
-            <span class="eco-card__example">Uniswap, SushiSwap, Curve</span>
-          </article>
+      </section>
 
-          <article class="eco-card" tabindex="0">
-            <div class="eco-card__icon eco-card__icon--lending">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-              </svg>
-            </div>
-            <h3 class="eco-card__title">Lending &amp; Borrowing</h3>
-            <span class="eco-card__tag">Money Markets</span>
-            <p class="eco-card__desc">
-              Supply assets to earn yield or borrow against collateral without
-              credit checks. Interest rates adjust algorithmically based on supply
-              and demand.
-            </p>
-            <span class="eco-card__example">Aave, Compound, MakerDAO</span>
-          </article>
-
-          <article class="eco-card" tabindex="0">
-            <div class="eco-card__icon eco-card__icon--stable">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M8 12h8M12 8v8"/>
-              </svg>
-            </div>
-            <h3 class="eco-card__title">Stablecoins</h3>
-            <span class="eco-card__tag">Price Stability</span>
-            <p class="eco-card__desc">
-              Tokens pegged to fiat currencies like the US Dollar. They provide
-              a stable medium of exchange and store of value within the volatile
-              crypto ecosystem.
-            </p>
-            <span class="eco-card__example">USDC, DAI, FRAX</span>
-          </article>
-
-          <article class="eco-card" tabindex="0">
-            <div class="eco-card__icon eco-card__icon--derivatives">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-              </svg>
-            </div>
-            <h3 class="eco-card__title">Derivatives</h3>
-            <span class="eco-card__tag">Synthetics</span>
-            <p class="eco-card__desc">
-              Tokenized derivatives that track the price of any asset — stocks,
-              commodities, or indices — enabling global access to synthetic
-              exposure without owning the underlying.
-            </p>
-            <span class="eco-card__example">Synthetix, dYdX, GMX</span>
-          </article>
-
-          <article class="eco-card" tabindex="0">
-            <div class="eco-card__icon eco-card__icon--yield">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-              </svg>
-            </div>
-            <h3 class="eco-card__title">Yield &amp; Staking</h3>
-            <span class="eco-card__tag">Passive Income</span>
-            <p class="eco-card__desc">
-              Earn returns by providing liquidity, staking governance tokens, or
-              participating in protocol incentive programs. Strategies range from
-              conservative to aggressive.
-            </p>
-            <span class="eco-card__example">Lido, EigenLayer, Pendle</span>
-          </article>
-
-          <article class="eco-card" tabindex="0">
-            <div class="eco-card__icon eco-card__icon--insurance">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </div>
-            <h3 class="eco-card__title">Insurance &amp; Risk</h3>
-            <span class="eco-card__tag">Protection</span>
-            <p class="eco-card__desc">
-              Decentralized coverage against smart contract bugs, oracle failures,
-              and protocol hacks. Parametric payouts governed by community
-              assessors rather than claims adjusters.
-            </p>
-            <span class="eco-card__example">Nexus Mutual, InsurAce</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Benefits & Risks -->
-    <section class="section" id="benefits-risks">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__kicker">The Full Picture</span>
-          <h2 class="section__title">Benefits <span class="text-amber">&amp;</span> <span class="text-accent">Risks</span></h2>
-          <p class="section__desc">
-            DeFi offers transformative potential — but it is not without risk.
-            Understanding both sides is essential for informed participation.
+      <!-- Section II: Ecosystem -->
+      <section class="section section--alt" id="ecosystem" data-cms-section="ecosystem">
+        <div class="container">
+          <span class="section__num">II</span>
+          <h2 class="section__title">Ecosystem Composition</h2>
+          <p class="section__body section__body--intro">
+            The DeFi landscape can be decomposed into six functional primitives,
+            each addressing a specific financial service category. Together they
+            form a parallel financial stack.
           </p>
-        </div>
-        <div class="grid grid--2col">
-          <div class="card card--success">
-            <h3 class="card__title card__title--icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-              Benefits
-            </h3>
-            <ul class="check-list">
-              <li class="check-list__item">
-                <strong>Financial Inclusion</strong>
-                <span>1.4&nbsp;billion unbanked adults worldwide can access DeFi with just a smartphone.</span>
-              </li>
-              <li class="check-list__item">
-                <strong>Eliminated Intermediaries</strong>
-                <span>No brokers, bankers, or clearing houses. Smart contracts automate settlement.</span>
-              </li>
-              <li class="check-list__item">
-                <strong>Programmable Money</strong>
-                <span>Automate complex financial operations — recurring payments, conditional transfers, dynamic interest.</span>
-              </li>
-              <li class="check-list__item">
-                <strong>Full Custody</strong>
-                <span>You hold your private keys. No exchange can freeze, seize, or restrict your assets.</span>
-              </li>
-              <li class="check-list__item">
-                <strong>Censorship Resistance</strong>
-                <span>Transactions cannot be blocked based on geography, identity, or political affiliation.</span>
-              </li>
-            </ul>
-          </div>
-          <div class="card card--danger">
-            <h3 class="card__title card__title--icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                <line x1="12" y1="9" x2="12" y2="13"/>
-                <line x1="12" y1="17" x2="12.01" y2="17"/>
-              </svg>
-              Risks
-            </h3>
-            <ul class="check-list check-list--danger">
-              <li class="check-list__item">
-                <strong>Smart Contract Risk</strong>
-                <span>Bugs in code can lead to irreversible loss. Even audited protocols have been exploited.</span>
-              </li>
-              <li class="check-list__item">
-                <strong>Regulatory Uncertainty</strong>
-                <span>Evolving regulations may impact protocol operations, token values, and user obligations.</span>
-              </li>
-              <li class="check-list__item">
-                <strong>Volatility &amp; Liquidation</strong>
-                <span>Collateralized loans can be liquidated in minutes during sharp market downturns.</span>
-              </li>
-              <li class="check-list__item">
-                <strong>Oracle Manipulation</strong>
-                <span>Price feeds can be manipulated, causing cascading liquidations and protocol insolvency.</span>
-              </li>
-              <li class="check-list__item">
-                <strong>Irreversible Errors</strong>
-                <span>No &ldquo;undo&rdquo; button. A wrong address, a misconfigured slippage — funds can be lost forever.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Get Started -->
-    <section class="section section--alt" id="get-started">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__kicker">Your Journey</span>
-          <h2 class="section__title">How to <span class="text-accent">Get Started</span></h2>
-          <p class="section__desc">
-            Entering DeFi requires care and education. Follow these steps to begin
-            your journey into decentralized finance safely and confidently.
+          <div class="ecosystem" id="ecosystem-grid">
+            <div class="eco-item">
+              <span class="eco-item__label">01</span>
+              <div class="eco-item__body">
+                <h3 class="eco-item__title">Decentralized Exchanges (DEXs)</h3>
+                <p class="eco-item__desc">Peer-to-peer token trading via automated market makers. Liquidity providers deposit asset pairs into pools; traders swap against pool reserves. Eliminates order-book matching and centralized custody.</p>
+                <p class="eco-item__examples">Uniswap&ensp;·&ensp;Curve&ensp;·&ensp;Balancer&ensp;·&ensp;SushiSwap</p>
+              </div>
+            </div>
+
+            <div class="eco-item">
+              <span class="eco-item__label">02</span>
+              <div class="eco-item__body">
+                <h3 class="eco-item__title">Lending Protocols</h3>
+                <p class="eco-item__desc">Overcollateralized borrowing and lending markets. Suppliers deposit assets into liquidity pools to earn variable-rate yield; borrowers post collateral exceeding the loan value to access liquidity without credit assessment.</p>
+                <p class="eco-item__examples">Aave&ensp;·&ensp;Compound&ensp;·&ensp;MakerDAO&ensp;·&ensp;Morpho</p>
+              </div>
+            </div>
+
+            <div class="eco-item">
+              <span class="eco-item__label">03</span>
+              <div class="eco-item__body">
+                <h3 class="eco-item__title">Stablecoins</h3>
+                <p class="eco-item__desc">Tokens designed to maintain price parity with fiat currencies or other reference assets. Mechanisms include fiat-collateralized (USDC), crypto-overcollateralized (DAI), and algorithmic (FRAX). Serve as the unit of account for the DeFi economy.</p>
+                <p class="eco-item__examples">USDC&ensp;·&ensp;DAI&ensp;·&ensp;FRAX&ensp;·&ensp;USDT</p>
+              </div>
+            </div>
+
+            <div class="eco-item">
+              <span class="eco-item__label">04</span>
+              <div class="eco-item__body">
+                <h3 class="eco-item__title">Derivatives &amp; Synthetics</h3>
+                <p class="eco-item__desc">Tokenized financial contracts that derive value from underlying assets. Perpetual futures, options, and synthetic assets enable leveraged exposure, hedging, and access to off-chain assets without leaving the blockchain.</p>
+                <p class="eco-item__examples">dYdX&ensp;·&ensp;GMX&ensp;·&ensp;Synthetix&ensp;·&ensp;Hyperliquid</p>
+              </div>
+            </div>
+
+            <div class="eco-item">
+              <span class="eco-item__label">05</span>
+              <div class="eco-item__body">
+                <h3 class="eco-item__title">Yield &amp; Liquid Staking</h3>
+                <p class="eco-item__desc">Protocols that generate returns through staking, liquidity provision, and incentive distribution. Liquid staking derivatives (LSDs) tokenize staked positions, allowing staked assets to remain productive in DeFi while earning consensus-layer rewards.</p>
+                <p class="eco-item__examples">Lido&ensp;·&ensp;EigenLayer&ensp;·&ensp;Pendle&ensp;·&ensp;Ether.fi</p>
+              </div>
+            </div>
+
+            <div class="eco-item">
+              <span class="eco-item__label">06</span>
+              <div class="eco-item__body">
+                <h3 class="eco-item__title">Risk &amp; Insurance</h3>
+                <p class="eco-item__desc">Decentralized coverage against smart-contract failure, oracle manipulation, and protocol insolvency. Members pool capital into mutuals; claims are assessed and paid by community governance rather than corporate claims departments.</p>
+                <p class="eco-item__examples">Nexus Mutual&ensp;·&ensp;InsurAce&ensp;·&ensp;Unslashed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section III: Assessment -->
+      <section class="section" id="assessment" data-cms-section="assessment">
+        <div class="container container--narrow">
+          <span class="section__num">III</span>
+          <h2 class="section__title">Benefits &amp; Risk Assessment</h2>
+
+          <p class="section__body section__body--intro">
+            Any structural assessment of DeFi must weigh its transformative
+            potential against the material risks that remain unresolved. The
+            analysis below distinguishes between structural advantages inherent
+            to the architecture and contingent risks that may diminish as the
+            technology matures.
           </p>
+
+          <div class="two-col">
+            <div class="two-col__panel two-col__panel--positive">
+              <h3 class="panel__title">Structural Benefits</h3>
+              <dl class="panel__list">
+                <div class="panel__item">
+                  <dt>Financial Inclusion</dt>
+                  <dd>An estimated 1.4 billion adults lack access to formal financial services. DeFi requires only a smartphone and internet connection — no identity documents, minimum balances, or geographic proximity to bank branches.</dd>
+                </div>
+                <div class="panel__item">
+                  <dt>Disintermediation</dt>
+                  <dd>Smart contracts replace layers of intermediaries — brokers, custodians, clearinghouses, and settlement agents — compressing costs and eliminating single points of control and failure.</dd>
+                </div>
+                <div class="panel__item">
+                  <dt>Programmability</dt>
+                  <dd>Financial logic encoded in smart contracts enables automated, conditional execution: recurring payments, dynamic interest rates, parametric insurance payouts, and complex multi-party escrow arrangements.</dd>
+                </div>
+                <div class="panel__item">
+                  <dt>Transparency</dt>
+                  <dd>All transactions and protocol states are recorded on public ledgers. Reserve balances, liquidation thresholds, and governance decisions are auditable in real time by any observer — no trust required.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="two-col__panel two-col__panel--negative">
+              <h3 class="panel__title">Material Risks</h3>
+              <dl class="panel__list">
+                <div class="panel__item">
+                  <dt>Smart-Contract Vulnerability</dt>
+                  <dd>Code bugs can result in irreversible loss of funds. Bridge exploits and protocol hacks have resulted in billions of dollars in losses — and even audited contracts have been compromised.</dd>
+                </div>
+                <div class="panel__item">
+                  <dt>Regulatory Uncertainty</dt>
+                  <dd>Legal frameworks for DeFi remain unsettled across major jurisdictions. Protocol developers, token issuers, and users face evolving obligations with potentially retroactive enforcement risk.</dd>
+                </div>
+                <div class="panel__item">
+                  <dt>Oracle Dependency</dt>
+                  <dd>DeFi protocols rely on external price feeds. Manipulated oracles can trigger cascading liquidations and protocol insolvency, as demonstrated in multiple high-profile exploits.</dd>
+                </div>
+                <div class="panel__item">
+                  <dt>Irreversibility</dt>
+                  <dd>There is no "undo." A mistyped address, a misconfigured slippage tolerance, or a compromised wallet can result in permanent loss with no recourse — a feature and a hazard.</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
         </div>
-        <div class="steps">
-          <div class="step">
-            <div class="step__number">01</div>
-            <div class="step__content">
-              <h3 class="step__title">Set Up a Self-Custody Wallet</h3>
-              <p class="step__desc">
-                Download a non-custodial wallet like MetaMask, Rabby, or Phantom.
-                Write down your seed phrase on paper — never store it digitally.
-                This wallet is your identity and bank account in DeFi.
-              </p>
+      </section>
+
+      <!-- Section IV: Engagement -->
+      <section class="section section--alt" id="engagement" data-cms-section="engagement">
+        <div class="container container--narrow">
+          <span class="section__num">IV</span>
+          <h2 class="section__title">Engagement Pathway</h2>
+          <p class="section__body section__body--intro">
+            For individuals and institutions considering DeFi exposure, a phased
+            approach mitigates the asymmetric risk profile inherent to the space.
+          </p>
+
+          <div class="pathway" id="pathway-steps">
+            <div class="pathway__step">
+              <span class="pathway__num">1</span>
+              <div class="pathway__body">
+                <h4 class="pathway__title">Establish Self-Custody</h4>
+                <p>Deploy a non-custodial wallet (Rabby, MetaMask, Phantom). Record the seed phrase on physical media stored in a secure location. This wallet becomes your identity layer and asset custodian in the DeFi ecosystem.</p>
+              </div>
+            </div>
+            <div class="pathway__step">
+              <span class="pathway__num">2</span>
+              <div class="pathway__body">
+                <h4 class="pathway__title">Acquire Base-Layer Assets</h4>
+                <p>Purchase ETH (Ethereum) or SOL (Solana) from a regulated on-ramp. Transfer a small test amount to your wallet before moving larger sums. Gas tokens are required for all network operations.</p>
+              </div>
+            </div>
+            <div class="pathway__step">
+              <span class="pathway__num">3</span>
+              <div class="pathway__body">
+                <h4 class="pathway__title">Execute a Calibrated Transaction</h4>
+                <p>Connect your wallet to a major DEX or lending protocol. Execute a single, small transaction — a token swap or a modest deposit — to observe gas mechanics, slippage, confirmation latency, and tax implications.</p>
+              </div>
+            </div>
+            <div class="pathway__step">
+              <span class="pathway__num">4</span>
+              <div class="pathway__body">
+                <h4 class="pathway__title">Scale Deliberately</h4>
+                <p>Study protocol documentation, follow security researchers, and engage with community governance. Diversify across protocols and chains. Never allocate more capital than you are prepared to lose in full.</p>
+              </div>
             </div>
           </div>
-          <div class="step">
-            <div class="step__number">02</div>
-            <div class="step__content">
-              <h3 class="step__title">Acquire a Small Amount of Crypto</h3>
-              <p class="step__desc">
-                Purchase ETH (for Ethereum), SOL (for Solana), or another base
-                asset from a reputable exchange. Transfer a small test amount to
-                your wallet first. Start with what you can afford to lose.
-              </p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step__number">03</div>
-            <div class="step__content">
-              <h3 class="step__title">Explore a DEX or Lending Protocol</h3>
-              <p class="step__desc">
-                Connect your wallet to a major protocol like Uniswap or Aave.
-                Experiment with a small swap or deposit. Observe how gas fees,
-                slippage, and confirmations work in practice.
-              </p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step__number">04</div>
-            <div class="step__content">
-              <h3 class="step__title">Learn &amp; Diversify Gradually</h3>
-              <p class="step__desc">
-                Study protocol documentation. Join Discord communities. Follow
-                security researchers. Diversify across protocols and chains.
-                Never invest more than you are prepared to lose entirely.
-              </p>
-            </div>
-          </div>
+
+          <aside class="disclaimer" role="note">
+            <strong>Disclaimer:</strong> This briefing is published for informational
+            and educational purposes only. It does not constitute investment advice,
+            a solicitation, or a recommendation to buy or sell any asset. DeFi
+            carries significant risk of total capital loss. Consult a qualified
+            professional before making financial decisions.
+          </aside>
         </div>
-      </div>
-    </section>
+      </section>
+    </article>
   </main>
 
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#" class="nav__logo" aria-label="DeFi Home">
-          <svg class="nav__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <rect width="32" height="32" rx="8" fill="currentColor" fill-opacity="0.12"/>
-            <path d="M10 16L14 20L22 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="nav__logo-text">DeFi <span class="nav__logo-subtle">Explorer</span></span>
-        </a>
-        <p class="footer__tagline">
-          An informative resource on Decentralized Finance — built and maintained
-          by <a href="https://www.hheuristics.com" target="_blank" rel="noopener noreferrer">H&nbsp;Heuristics</a>.
-        </p>
+        <p class="footer__name">H<span class="footer__name-accent">&nbsp;Heuristics</span></p>
+        <p class="footer__tagline">Actionable intelligence for complex decisions.</p>
+        <p class="footer__location">Nottingham, United Kingdom</p>
       </div>
       <div class="footer__links">
         <div class="footer__col">
           <h4 class="footer__heading">Sections</h4>
-          <a href="#what-is-defi" class="footer__link">What Is DeFi</a>
+          <a href="#architecture" class="footer__link">Architecture</a>
           <a href="#ecosystem" class="footer__link">Ecosystem</a>
-          <a href="#benefits-risks" class="footer__link">Benefits &amp; Risks</a>
-          <a href="#get-started" class="footer__link">Get Started</a>
+          <a href="#assessment" class="footer__link">Assessment</a>
+          <a href="#engagement" class="footer__link">Engagement</a>
         </div>
         <div class="footer__col">
           <h4 class="footer__heading">Resources</h4>
           <a href="https://defillama.com" target="_blank" rel="noopener noreferrer" class="footer__link">DeFi Llama</a>
           <a href="https://ethereum.org" target="_blank" rel="noopener noreferrer" class="footer__link">Ethereum.org</a>
-          <a href="https://github.com/Hunterhghs/DEFI-webpage" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
           <a href="https://www.hheuristics.com" target="_blank" rel="noopener noreferrer" class="footer__link">H Heuristics</a>
+          <a href="https://github.com/Hunterhghs/DEFI-webpage" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
         </div>
       </div>
     </div>
-    <div class="footer__bottom">
+    <div class="footer__base">
       <div class="container">
-        <p>&copy; 2026 H Heuristics. Content for informational purposes only — not financial advice.</p>
+        <p>&copy; 2026 H Heuristics. All rights reserved.</p>
+        <p>Powered by Webflow CMS. <a href="webflow_sync.py">Sync script</a>.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Webflow CMS content loader -->
+  <script src="js/content-loader.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/webflow-cms.js"></script>
 </body>
 </html>

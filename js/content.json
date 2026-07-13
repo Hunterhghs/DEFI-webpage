@@ -1,0 +1,153 @@
+{
+  "sites": [
+    {
+      "id": "YOUR_SITE_ID",
+      "name": "DEFI Webpage",
+      "short_name": "defi-webpage",
+      "preview_url": ""
+    }
+  ],
+  "content": [
+    {
+      "collection_id": "col_architecture",
+      "collection_name": "Architecture Section",
+      "collection_slug": "architecture",
+      "item_count": 1,
+      "items": [
+        {
+          "id": "item_arch_01",
+          "name": "Defining the Architecture",
+          "slug": "architecture",
+          "description": "Decentralized Finance refers to a set of financial services deployed on public blockchain networks — primarily Ethereum and its layer-2 scaling solutions. Unlike conventional finance, which operates through centralized intermediaries, DeFi executes financial logic through immutable smart contracts: self-executing code that settles transactions autonomously on-chain.",
+          "content": "",
+          "category": "architecture",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "collection_id": "col_ecosystem",
+      "collection_name": "Ecosystem Components",
+      "collection_slug": "ecosystem",
+      "item_count": 6,
+      "items": [
+        {
+          "id": "item_eco_01",
+          "name": "Decentralized Exchanges (DEXs)",
+          "slug": "ecosystem",
+          "description": "Peer-to-peer token trading via automated market makers. Liquidity providers deposit asset pairs into pools; traders swap against pool reserves. Eliminates order-book matching and centralized custody.",
+          "content": "Uniswap · Curve · Balancer · SushiSwap",
+          "category": "ecosystem",
+          "order": 1
+        },
+        {
+          "id": "item_eco_02",
+          "name": "Lending Protocols",
+          "slug": "ecosystem",
+          "description": "Overcollateralized borrowing and lending markets. Suppliers deposit assets into liquidity pools to earn variable-rate yield; borrowers post collateral exceeding the loan value to access liquidity without credit assessment.",
+          "content": "Aave · Compound · MakerDAO · Morpho",
+          "category": "ecosystem",
+          "order": 2
+        },
+        {
+          "id": "item_eco_03",
+          "name": "Stablecoins",
+          "slug": "ecosystem",
+          "description": "Tokens designed to maintain price parity with fiat currencies. Mechanisms include fiat-collateralized (USDC), crypto-overcollateralized (DAI), and algorithmic (FRAX). Serve as the unit of account for the DeFi economy.",
+          "content": "USDC · DAI · FRAX · USDT",
+          "category": "ecosystem",
+          "order": 3
+        },
+        {
+          "id": "item_eco_04",
+          "name": "Derivatives & Synthetics",
+          "slug": "ecosystem",
+          "description": "Tokenized financial contracts that derive value from underlying assets. Perpetual futures, options, and synthetic assets enable leveraged exposure, hedging, and access to off-chain assets without leaving the blockchain.",
+          "content": "dYdX · GMX · Synthetix · Hyperliquid",
+          "category": "ecosystem",
+          "order": 4
+        },
+        {
+          "id": "item_eco_05",
+          "name": "Yield & Liquid Staking",
+          "slug": "ecosystem",
+          "description": "Protocols that generate returns through staking, liquidity provision, and incentive distribution. Liquid staking derivatives tokenize staked positions, allowing staked assets to remain productive in DeFi while earning consensus-layer rewards.",
+          "content": "Lido · EigenLayer · Pendle · Ether.fi",
+          "category": "ecosystem",
+          "order": 5
+        },
+        {
+          "id": "item_eco_06",
+          "name": "Risk & Insurance",
+          "slug": "ecosystem",
+          "description": "Decentralized coverage against smart-contract failure, oracle manipulation, and protocol insolvency. Members pool capital into mutuals; claims are assessed and paid by community governance rather than corporate claims departments.",
+          "content": "Nexus Mutual · InsurAce · Unslashed",
+          "category": "ecosystem",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "collection_id": "col_assessment",
+      "collection_name": "Assessment Section",
+      "collection_slug": "assessment",
+      "item_count": 1,
+      "items": [
+        {
+          "id": "item_assess_01",
+          "name": "Benefits & Risk Assessment",
+          "slug": "assessment",
+          "description": "Any structural assessment of DeFi must weigh its transformative potential against the material risks that remain unresolved. The analysis below distinguishes between structural advantages inherent to the architecture and contingent risks that may diminish as the technology matures.",
+          "content": "",
+          "category": "assessment",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "collection_id": "col_engagement",
+      "collection_name": "Engagement Pathway",
+      "collection_slug": "engagement",
+      "item_count": 4,
+      "items": [
+        {
+          "id": "item_eng_01",
+          "name": "Establish Self-Custody",
+          "slug": "engagement",
+          "description": "Deploy a non-custodial wallet (Rabby, MetaMask, Phantom). Record the seed phrase on physical media stored in a secure location. This wallet becomes your identity layer and asset custodian in the DeFi ecosystem.",
+          "content": "",
+          "category": "pathway",
+          "order": 1
+        },
+        {
+          "id": "item_eng_02",
+          "name": "Acquire Base-Layer Assets",
+          "slug": "engagement",
+          "description": "Purchase ETH (Ethereum) or SOL (Solana) from a regulated on-ramp. Transfer a small test amount to your wallet before moving larger sums. Gas tokens are required for all network operations.",
+          "content": "",
+          "category": "pathway",
+          "order": 2
+        },
+        {
+          "id": "item_eng_03",
+          "name": "Execute a Calibrated Transaction",
+          "slug": "engagement",
+          "description": "Connect your wallet to a major DEX or lending protocol. Execute a single, small transaction — a token swap or a modest deposit — to observe gas mechanics, slippage, confirmation latency, and tax implications.",
+          "content": "",
+          "category": "pathway",
+          "order": 3
+        },
+        {
+          "id": "item_eng_04",
+          "name": "Scale Deliberately",
+          "slug": "engagement",
+          "description": "Study protocol documentation, follow security researchers, and engage with community governance. Diversify across protocols and chains. Never allocate more capital than you are prepared to lose in full.",
+          "content": "",
+          "category": "pathway",
+          "order": 4
+        }
+      ]
+    }
+  ],
+  "synced_at": 1752356800.0
+}
