@@ -11,14 +11,14 @@
   --color-bg-alt:        #f2f1ee;
   --color-surface:       #ffffff;
   --color-border:        #e2e0dc;
-  --color-border-light:  #edebe8;
+  --color-border-light:  #e6e6e6;
 
-  --color-text-primary:   #1a1a24;
+  --color-text-primary:   #1a1a23;
   --color-text-secondary: #4a4954;
   --color-text-tertiary:  #8a8994;
   --color-text-inverse:   #fafaf8;
 
-  --color-accent:        #c41e3a;   /* Classic editorial red */
+  --color-accent:        #b4313e;
   --color-accent-dim:    #9b1b31;
   --color-navy:          #1e2a4a;
   --color-navy-light:    #e8ecf4;
@@ -62,7 +62,7 @@
     --color-border:        #2a2a35;
     --color-border-light:  #1e1e28;
 
-    --color-text-primary:   #e8e8ed;
+    --color-text-primary:   #e8e8ec;
     --color-text-secondary: #a0a0aa;
     --color-text-tertiary:  #686878;
     --color-text-inverse:   #0d0d12;
